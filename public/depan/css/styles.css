@@ -1,0 +1,197 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Variables */
+:root{
+    --primary-color: #fb6a27;
+    --dark-color: #0f0f0f;
+    --gray-color: gray;
+
+    --h1-font-size: 40px;
+    --h2-font-size: 32px;
+    --small-font-size: 14px;
+}
+/* Reset Css */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+img{
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Global Css */
+section{
+    padding: 70px 0;
+}
+
+section.section-title{
+    font-size: var(--h2-font-size);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn-orange{
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-orange:hover{
+    background-color: var(--dark-color);
+    color: white;
+}
+
+.text-orange{
+    color: var(--primary-color);
+}
+
+.text-dark{
+    color: var(--dark-color);
+}
+
+.fs-7{
+    font-size: var(--small-font-size);
+}
+
+.form-color:focus{
+    box-shadow: none;
+    background-color: var(--primary-color);
+}
+/* Css Per Section */
+
+/* Navbar */
+.navbar .nav-item .nav-link:hover,
+.navbar .nav-item .nav-link:active {
+    color: var(--primary-color);
+}
+
+/* Header */
+.header-section {
+    margin-top: 100px; /* Beri jarak atas sebesar 100px */
+}
+
+.header-section .header-tittle{
+    font-size: var(--h1-font-size);
+}
+
+.header-section .header-skill{
+    color: var(--dark-color);
+}
+
+.header-section .header-skill:hover{
+    color: var(--primary-color);
+}
+
+.header-section .header-skill i {
+    transition: .3s;
+}
+
+.header-section .header-skill:hover i{
+    transition: rotate(-45deg);
+}
+
+.header-img-wrapper {
+    position: relative;
+    display: inline-block; /* Supaya menjadi blok di dalam elemen parent */
+    padding: 20px; /* Jarak antara gambar dan lingkaran */
+    border-radius: 50%; /* Membuat elemen menjadi lingkaran */
+    background-color: var(--primary-color); /* Warna lingkaran */
+    box-shadow: 0 0 15px rgba(251, 106, 39, 0.5); /* Efek bayangan */
+    overflow: hidden; /* Menghindari gambar keluar dari lingkaran */
+    margin: 0 auto; /* Membuat wrapper ke tengah secara horizontal */
+    margin-top: 50px; /* Beri jarak atas sebesar 50px untuk gambar */
+}
+
+.header-img-wrapper img {
+    width: 450px; /* Membuat gambar lebih besar */
+    height: 450px; /* Membuat gambar tetap proporsional */
+    object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+    border-radius: 60%; /* Membuat gambar juga menjadi lingkaran */
+    display: block; /* Menghapus margin bawaan gambar */
+    transition: transform 0.3s ease; /* Menambahkan transisi untuk efek smooth */
+}
+
+.header-img-wrapper:hover img {
+    transform: scale(1.2); /* Membesarkan gambar hingga 120% saat hover */
+}
+
+/* Pastikan elemen parent dari .header-img-wrapper */
+.header-section .container {
+    display: flex; /* Mengaktifkan flexbox pada parent */
+    justify-content: center; /* Menyusun elemen ke tengah horizontal */
+    align-items: center; /* Menyusun elemen ke tengah vertikal */
+    flex-direction: column; /* (Opsional) jika ingin stack elemen secara vertikal */
+    height: 100%; /* Pastikan tinggi parent cukup besar */
+}
+
+
+
+
+
+/* Portofolio */
+.portofolio-section .card .card-img-top{
+    height: 240px;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-widht: 768px){
+    .portofolio-section .card .card-img-top{
+        height: 100px;
+    }
+}
+
+/* Skill */
+.skill-section, footer{
+    background-color: #030304;
+}
+
+.skill-section .progress-bar{
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+    background-color: var(--gray-color);
+}
+
+.skill-section .progress-bar .progress{
+    background-color: var(--primary-color);
+}
+
+.skill-section .skill-img{
+    width: 90%;
+}
+
+/* Gaya Umum untuk Daftar Ikon Keterampilan */
+.dev-icons {
+    padding: 0; /* Hapus padding */
+    list-style: none; /* Hapus bullet */
+    text-align: center; /* Pusatkan daftar */
+}
+
+.list-inline-item {
+    display: inline-block; /* Tampilkan item dalam satu baris */
+    margin: 0 20px; /* Jarak antar item */
+    font-size: 3rem; /* Ukuran font untuk ikon yang lebih besar */
+    color: #343a40; /* Warna ikon */
+    transition: color 0.3s, transform 0.3s; /* Efek transisi saat hover */
+}
+
+.list-inline-item:hover {
+    color: #f41606; /* Warna saat hover */
+    transform: scale(1.2); /* Efek zoom saat hover */
+}
+
+/* Responsif untuk ikon */
+@media (max-width: 768px) {
+    .list-inline-item {
+        font-size: 5rem; /* Ukuran font lebih kecil di perangkat kecil */
+        margin: 0 10px; /* Jarak antar item lebih kecil */
+    }
+}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "version": 2,
     "builds": [
@@ -13,3 +14,27 @@
       }
     ]
   }
+=======
+{
+  "version": 2,
+  "functions": {
+      "api/index.php": {
+          "runtime": "vercel-php@0.7.3"
+      }
+  },
+  "routes": [
+      {
+          "src": "/(.+)",
+          "dest": "/api/index.php"
+      }
+  ],
+  "env": {
+      "APP_ENV": "production",
+      "APP_DEBUG": "false",
+      "APP_URL": "https://your-app-url.vercel.app",
+      "APP_KEY": "your-app-key",
+      "CACHE_DRIVER": "array",
+      "SESSION_DRIVER": "cookie"
+  }
+}
+>>>>>>> c2c5c69 (update file)
